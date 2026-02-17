@@ -37,7 +37,10 @@ fn main() {
         .and_then(|s| s.parse::<u64>().ok())
         .unwrap_or(1_000_000);
 
-    println!("Calculating Pi using Monte Carlo method with {} samples...", num_samples);
+    println!(
+        "Calculating Pi using Monte Carlo method with {} samples...",
+        num_samples
+    );
 
     let pi_estimate = monte_carlo_pi(num_samples);
     let actual_pi = std::f64::consts::PI;
